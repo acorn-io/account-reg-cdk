@@ -1,4 +1,4 @@
-name: Deploy template to S3 for staging
+name: Deploy template to S3 for stg
 
 on:
   workflow_dispatch:
