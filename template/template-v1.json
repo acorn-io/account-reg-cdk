@@ -188,7 +188,10 @@
                 "ec2:UnassignIpv6Addresses",
                 "ec2:UnassignPrivateIpAddresses",
                 "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
-                "ec2:UpdateSecurityGroupRuleDescriptionsIngress"
+                "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
+                "ec2:TerminateInstances",
+                "elasticloadbalancing:DescribeLoadBalancers",
+                "elasticloadbalancing:DeleteLoadBalancer"
               ],
               "Resource": "*"
             },
@@ -229,6 +232,7 @@
                 "cloudformation:CreateStack",
                 "cloudformation:UpdateStack",
                 "cloudformation:DeleteStack",
+                "cloudformation:DescribeStackEvents",
                 "cloudformation:CreateChangeSet",
                 "cloudformation:ExecuteChangeSet",
                 "cloudformation:DescribeStackResource",
