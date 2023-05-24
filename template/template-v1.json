@@ -26,7 +26,7 @@
     }
   },
   "Resources": {
-    "AcornManagedPolicy": {
+    "AcornManagedPolicy1": {
       "Type": "AWS::IAM::ManagedPolicy",
       "Properties": {
         "Description": "Acorn Account Policy",
@@ -194,7 +194,18 @@
                 "elasticloadbalancing:DeleteLoadBalancer"
               ],
               "Resource": "*"
-            },
+            }
+          ]
+        }
+      }
+    },
+    "AcornManagedPolicy2": {
+      "Type": "AWS::IAM::ManagedPolicy",
+      "Properties": {
+        "Description": "Acorn Account Policy",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
             {
               "Effect": "Allow",
               "Action": [
@@ -223,7 +234,6 @@
               "Resource": "*"
             },
             {
-              "Effect": "Allow",
               "Action": [
                 "sqs:*",
                 "events:*",
@@ -288,7 +298,10 @@
         },
         "ManagedPolicyArns": [
           {
-            "Ref": "AcornManagedPolicy"
+            "Ref": "AcornManagedPolicy1"
+          },
+          {
+            "Ref": "AcornManagedPolicy2"
           }
         ]
       }
