@@ -192,8 +192,8 @@
                 "ec2:TerminateInstances",
                 "elasticloadbalancing:DescribeLoadBalancers",
                 "elasticloadbalancing:DeleteLoadBalancer",
-                "elasticloadbalancingv2:DescribeTargetGroups",
-                "elasticloadbalancingv2:DeleteTargetGroup"
+                "elasticloadbalancing:DescribeTargetGroups",
+                "elasticloadbalancing:DeleteTargetGroup"
               ],
               "Resource": "*"
             }
