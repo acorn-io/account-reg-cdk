@@ -191,7 +191,9 @@
                 "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
                 "ec2:TerminateInstances",
                 "elasticloadbalancing:DescribeLoadBalancers",
-                "elasticloadbalancing:DeleteLoadBalancer"
+                "elasticloadbalancing:DeleteLoadBalancer",
+                "elasticloadbalancingv2:DescribeTargetGroups",
+                "elasticloadbalancingv2:DeleteTargetGroup"
               ],
               "Resource": "*"
             }
