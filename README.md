@@ -1,5 +1,5 @@
 # Lambda function and Cloud Formation template for AWS Account Registration
-This contains the code for the AWS Lambda function for AWS Account Registration flow for Hub. Additionally, it houses the cloud formation template used by users to create the role ARN.
+This contains the code for the AWS Lambda function for AWS Account Registration flow for Acorn Manager. Additionally, it houses the cloud formation template used by users to create the role ARN.
 
 ## IMPORTANT
 For now, every time the template is updated, the version of the template should be bumped. For example, if the file is `template/template-v5.json` and a change is being made to the file, be sure to bump the version to `template/template-v6.json`. 

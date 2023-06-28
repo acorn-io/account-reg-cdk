@@ -119,7 +119,7 @@ func HandleRequest(_ context.Context, event Event) (string, error) {
 
 	payload, err := json.Marshal(map[string]any{
 		"kind":       "AWSAccountRegistrationCallback",
-		"apiVersion": "internal.account.hub.acorn.io/v1",
+		"apiVersion": "internal.account.manager.acorn.io/v1",
 		"metadata": map[string]any{
 			"generateName": "create",
 		},
