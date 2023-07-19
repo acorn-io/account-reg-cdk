@@ -334,7 +334,7 @@
           "Fn::Join": [
             "-",
             [
-              "acorn-set-account-credentials",
+              "acorn-account-reg",
               {
                 "Ref": "AWS::StackName"
               }
@@ -342,13 +342,16 @@
           ]
         },
         "Role": {
-          "Fn::GetAtt": ["AcornLambdaRole","Arn"]
+          "Fn::GetAtt": [
+            "AcornLambdaRole",
+            "Arn"
+          ]
         },
         "Runtime": "go1.x",
         "Handler": "aws-registration-callback",
         "Code": {
-          "S3Bucket" : "BUCKET",
-          "S3Key" : "aws-registration-callback.zip"
+          "S3Bucket": "BUCKET",
+          "S3Key": "aws-registration-callback.zip"
         }
       }
     },
@@ -357,7 +360,10 @@
       "DependsOn": "AcornSetAccountCredentialsLambda",
       "Properties": {
         "ServiceToken": {
-          "Fn::GetAtt": ["AcornSetAccountCredentialsLambda", "Arn"]
+          "Fn::GetAtt": [
+            "AcornSetAccountCredentialsLambda",
+            "Arn"
+          ]
         },
         "ExternalId": {
           "Ref": "ExternalId"
