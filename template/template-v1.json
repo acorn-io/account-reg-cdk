@@ -234,7 +234,9 @@
                 "iam:ListPolicyVersions",
                 "iam:UpdateAssumeRolePolicy",
                 "iam:TagOpenIDConnectProvider",
-                "iam:DeletePolicyVersion"
+                "iam:DeletePolicyVersion",
+                "iam:ListOpenIDConnectProviderTags",
+                "iam:UntagOpenIDConnectProvider"
               ],
               "Resource": "*"
             },
