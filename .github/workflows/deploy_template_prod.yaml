@@ -9,11 +9,11 @@ jobs:
       matrix:
         include:
           - region: "us-east-2"
-            bucket: "acorn-provisioning-cf-us-east-220230413224010722900000001"
+            bucket: "acorn-reg-us-east-2-prod20230730204111204100000001"
           - region: "us-west-2"
-            bucket: "acorn-provisioning-cf-us-west-220230413224011053200000001"
+            bucket: "acorn-reg-us-west-2-prod20230730204111646800000001"
           - region: "eu-north-1"
-            bucket: "acorn-provisioning-cf-eu-north-120230413224011490400000001"
+            bucket: "acorn-reg-eu-north-1-prod20230730204112655900000001"
     name: Deploy template to S3
     runs-on: ubuntu-latest
     steps:

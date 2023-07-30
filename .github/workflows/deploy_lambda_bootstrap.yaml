@@ -9,7 +9,7 @@ jobs:
       matrix:
         include:
           - region: "us-east-2"
-            bucket: "acorn-provisioning-cf-us-east-220230714231301806800000001"
+            bucket: "acorn-reg-us-east-2-bootstrap20230730204329777700000001"
     name: Build and deploy lambda
     runs-on: ubuntu-latest
     steps:
