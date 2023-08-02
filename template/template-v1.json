@@ -246,6 +246,7 @@
                 "events:*",
                 "aps:*",
                 "cloudformation:DescribeStacks",
+                "cloudformation:ListStacks",
                 "cloudformation:CreateStack",
                 "cloudformation:UpdateStack",
                 "cloudformation:DeleteStack",
