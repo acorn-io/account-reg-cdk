@@ -315,6 +315,7 @@
     },
     "AcornLambdaRole": {
       "Type": "AWS::IAM::Role",
+      "DependsOn" : "AcornRole",
       "Properties": {
         "AssumeRolePolicyDocument": {
           "Version": "2012-10-17",
