@@ -6,7 +6,40 @@ on:
     - cron: "00 16 * * 1-5" # time in UTC
 
 jobs:
-  deploy_lambda:
+  auto_deploy_lambda:
+    if: ${{ vars.ENABLED == 'true' && github.event_name != 'workflow_dispatch' }}
+    strategy:
+      matrix:
+        include:
+          - region: "us-east-2"
+            bucket: "acorn-reg-us-east-2-prod20230730204111204100000001"
+          - region: "us-west-2"
+            bucket: "acorn-reg-us-west-2-prod20230730204111646800000001"
+          - region: "eu-north-1"
+            bucket: "acorn-reg-eu-north-1-prod20230730204112655900000001"
+    name: Build and deploy lambda
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-go@v4
+        with:
+          cache: false
+          go-version: "1.20"
+      - name: make package
+        run: make package
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_PROD }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY_PROD }}
+          aws-region: ${{ matrix.region }}
+      - name: Deploy new code to s3 bucket
+        run: |
+          aws s3 cp aws-registration-callback.zip s3://${{ matrix.bucket }}/aws-registration-callback.zip
+  manual_deploy_lambda:
+    if: ${{ github.event_name == 'workflow_dispatch' }}
     strategy:
       matrix:
         include:
