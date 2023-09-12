@@ -352,7 +352,7 @@
             "Arn"
           ]
         },
-        "Runtime": "go1.x",
+        "Runtime": "provided.al2",
         "Handler": "aws-registration-callback",
         "Code": {
           "S3Bucket": "BUCKET",
