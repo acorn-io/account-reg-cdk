@@ -368,7 +368,10 @@
                 "ecr:DeleteRepository",
                 "ecr:DescribeRepositories",
                 "ecr:SetRepositoryPolicy",
-                "ecr:PutLifecyclePolicy"
+                "ecr:PutLifecyclePolicy",
+                "ecr:PutImageTagMutability",
+                "ecr:ListTagsForResource",
+                "ecr:UntagResource"
               ],
               "Effect": "Allow",
               "Resource": [
