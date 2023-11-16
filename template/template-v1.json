@@ -237,7 +237,8 @@
                 "iam:DeletePolicyVersion",
                 "iam:ListOpenIDConnectProviderTags",
                 "iam:UntagOpenIDConnectProvider",
-                "iam:TagRole"
+                "iam:TagRole",
+                "iam:GetInstanceProfile"
               ],
               "Resource": "*"
             },
@@ -288,7 +289,9 @@
               "Action": [
                 "ssm:PutParameter",
                 "ssm:AddTagsToResource",
-                "ssm:DeleteParameter"
+                "ssm:DeleteParameter",
+                "ssm:SendCommand",
+                "ssm:GetCommandInvocation"
               ],
               "Effect": "Allow",
               "Resource": "*"
