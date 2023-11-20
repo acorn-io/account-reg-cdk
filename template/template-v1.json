@@ -238,7 +238,8 @@
                 "iam:ListOpenIDConnectProviderTags",
                 "iam:UntagOpenIDConnectProvider",
                 "iam:TagRole",
-                "iam:GetInstanceProfile"
+                "iam:GetInstanceProfile",
+                "iam:CreatePolicyVersion"
               ],
               "Resource": "*"
             },
